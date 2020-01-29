@@ -5,7 +5,7 @@
 using namespace std;
 
 // Names of the stats
-const std::string STATS_NAMES[] = { "Strength", "Agility", "Intellect", "Charisma" };
+const string STATS_NAMES[] = { "Strength", "Agility", "Intellect", "Charisma" };
 
 
 // Default constructor, builds a fully random character sheet
@@ -144,7 +144,7 @@ string CharSheet::generateRace(bool random) {
     // Choose a random race index from the defaults
     if (random) {
             int randomRace = rand() % 5 + 1;
-            yourRace = std::to_string(randomRace);
+            yourRace = to_string(randomRace);
     }
     
     // Otherwise ask the user
@@ -289,21 +289,21 @@ string CharSheet::generateClass(bool random) {
 
 /* Getters */
 
-std::string CharSheet::getName() {
+string CharSheet::getName() {
     return c_name;
 }
 
-std::string CharSheet::getRace() {
+string CharSheet::getRace() {
     return c_race;
 }
-std::string CharSheet::getGender() {
+string CharSheet::getGender() {
     return c_gender;
 }
-std::string CharSheet::getClass() {
+string CharSheet::getClass() {
     return c_class;
 }
 
-std::vector<int> CharSheet::getStats() {
+vector<int> CharSheet::getStats() {
     
     vector<int> stats;
     
